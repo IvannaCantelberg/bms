@@ -5,7 +5,12 @@
     "outDir": "./out-tsc/app",
     "types": [
       "node"
-    ]
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@auth/*": ["app/pages/auth/*"]
+    }
   },
   "files": [
     "src/main.ts",

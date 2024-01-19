@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bms-saas": {
+      "hosting": {
+        "bms": [
+          "bms-saas"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bms-saas"
+  }
+}
