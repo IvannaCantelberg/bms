@@ -6,7 +6,7 @@ const redirectLoggedInToHome = () => redirectLoggedInTo(['dashboard']);
 const redirectUnauthorizedToHome = () => redirectUnauthorizedTo(['welcome']);
 
 export const routes: Routes = [
- { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+
 
  {path: 'welcome',
   loadComponent: () => import('./pages/welcome/welcome.component').then(mod => mod.WelcomeComponent),
@@ -18,12 +18,11 @@ export const routes: Routes = [
  {path: 'dashboard',
   loadComponent: () => import('./pages/dashboard/dashboard.component').then(mod => mod.DashboardComponent),
   canActivate: [AuthGuard],
-
   // data: { authGuardPipe: redirectUnauthorizedToHome }
 
 
 },
-
+{ path: '', redirectTo: 'welcome', pathMatch: 'full' },
  { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
 
 ]
